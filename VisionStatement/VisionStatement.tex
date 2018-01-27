@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+%\usepackage{times}
+\usepackage{cite}
+%this is a comment
+\title{Vision Statement: CommunityConnect.com}
+\author{Kamron Ebrahimi OSU ID: 932487053 \& Samuel Wilson OSU ID: 932505444\\ ONID: ebrahimk@oregonstate.edu \& wilsosam@oregonstate.edu}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{\bf Introduction}
+        \subsection{\bf Problem Statement}
+                \paragraph{\normalfont \indent Immigration is one of the countries most divisive political issues. One of the largest counter arguments to an open door immigration policy is that immigrants have difficulty assimilating into new cultures and as a result, fiscally contribute less to society. Difficulty assimilating into a brand new culture is an issue many immigrants/refugees experience and for good reason. Displaced peoples and immigrants could be victims of civil rights violations, fleeing corrupted governments, or simply seeking greater opportunities abroad. Regardless of their motive these individuals abandon their social networks and sense of stability to pursue a better life. It is thus critical that these individuals have some means of reconstructing their social lives to gain support networks and help them become a functioning member of society.
+}
+        \subsection{\bf Solution}
+                \paragraph{\normalfont \indent To help aid newcomers to the United States we propose constructing a web-based application we call CommunityConnect. CommunityConnect would be a simple application in which users, looking to connect with other people from a similar cultural background could create a profile consisting of a picture, a biography, a country of origin and contact information and have their profile cross listed with other community members of the same cultural background. In this manner people can make human connections with others who share their cultural identity, and can perhaps empathize with their condition, or offer advice for coping with the cultural shock.}
+
+\section{\bf Analysis}
+        \subsection{\bf Research}
+                \paragraph{\normalfont \indent host of scientific inquiries have been made into the effects of support networks among displaced individuals and immigrants. The 2014 study, \textit{Social isolation and perceived barriers to establishing social networks among Latina immigrants} ~\cite{Cite1}, found that “perceived social isolation and lack of social support negatively impact health” and  that many immigrants unaccustomed to US culture report “feeling lonely, isolated, closed-in, and less free in the US due to family separation and various obstacles to develop and maintain relationships.”}
+                \paragraph{\normalfont \indent This is not the only study to yield such results in fact there is a specific term for this phenomena coined “cultural isolationism.” The 2010 study \textit{Social support and health: immigrants and refugees perspectives} ~\cite{Cite2}, investigated the effects of social support on the utilization of public services among refugees and immigrants and found that there exist a positive correlation between the two. This study further reinforces the need for some web based application like CommunityConnect. If CommunityConnect can help build social networks then individuals are more likely to immerse themselves in a new culture and branch out into different aspects of that cultural lifestyle.}
+
+\section{\bf Design}
+        \subsection{\bf High-level Approach}
+                \paragraph{\normalfont \indent CommunityConnect would work on the same premise as many other social networking applications. Potential users would begin by creating an individualized account containing their name, photos, contact information, their location, a brief biography and of course their cultural background. These profiles would then be stored on a server which would run a program to cross compare the users ethnic background and location with other users in the database searching for matches. The server would return to the user a detailed list of individuals profiles within a certain mile radius of the user’s location who share the same cultural background.}
+        \subsection{\bf Innovation}
+                \paragraph{\normalfont \indent There are many humanitarian web-based applications which serve to connect immigrants or refugees with local resources or with lost family members and friends. Similarly the web application Meetup allows user to join groups based off of their ethnicity, and designated, user-organized events for large groups of people in metropolitan areas. CommunityConnect would personalize the user experience even more and potentially serve immigrants/refugees who move to more rural locations by finding individuals who share the users cultural background who are physically close by.}
+                \paragraph{\normalfont \indent If a person who lived in a rural community used Meetup they would potentially have to travel sometime to gathering location and then be exposed to a large gathering of people who may already be acquainted with one another. CommunityConnect would connect people on an individual and geographical basis so users can build close knit relations even in rural areas.}
+        \subsection{\bf Limitations}
+                \paragraph{\normalfont \indent There are two primary limitations to the success of CommunityConnect. The first concerns the applications user base. It is critical that CommunityConnect has an ethnically diverse user base so individuals from many different cultural backgrounds can use the app. The second major limitation of CommunityConnect would be gaining user traction in more rural locations. Some rural communities are completely homogenous, in a community like this CommunityConnect would have no user base, however there are often at least a small handful of individuals from different ethnic backgrounds in rural communities and being able to connect people from the same cultural background in predominantly homogenous locations is a great application of CommunityConnect.}
+
+\section{\bf Challenges}
+        \subsection{\bf Resources}
+                \paragraph{\normalfont \indent CommunityConnect would require little overhead to create a functioning application. A database would be needed to store all users personal accounts and information. This server would need to run an algorithm which cross compares user’s ethnic backgrounds and locations with other users. This algorithm could be written in a multitude of programming languages, C++, C, Python etc. etc. To make the application more user friendly an aesthetic, interactive webpage would be needed, easily written in HTML, CSS, and JavaScript. Furthermore this webpage would need a specified network domain, a resource which must be purchased and licensed. Finally the user would need an internet connection to use the application successfully.}
+        \subsection{\bf Potential Risks}
+                \paragraph{\normalfont \indent Anytime personal user information is stored on a server, security is a paramount concern. To mitigate security risks information stored on CommunityConnect servers would be encrypted. On a Linux operating system it is relatively easy to accomplish full-disk encryption while still allowing back-end software to function as normal. This is a symmetric method of encryption, thus users would be required to enter some login credentials and keys to access or change the data on the CommunityConnect databases.}
+
+\bibliography{VisionStatement}
+\bibliographystyle{plain}
+
+\end{document}
