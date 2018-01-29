@@ -1,4 +1,4 @@
-TARGET=VisionStatement
+TARGET=CommunityConnect-SRP
 
 
 default: pdf
@@ -6,7 +6,7 @@ default: pdf
 bib: bib
 	bibtex ${TARGET}
 
-dvi: ${TARGET}.tex 
+dvi: ${TARGET}.tex
 
 	latex ${TARGET}.tex
 
