@@ -1,0 +1,71 @@
+#section1 {
+      width: 100%;
+      height: 800px;
+      /*border-radius: 25px;*/
+      background: #ffb700;
+}
+
+#section2 {
+      width: 100%;
+      height: 800px;
+      /*border-radius: 25px;*/
+      background: #59a696;
+}
+
+#section3 {
+      width: 100%;
+      height: 800px;
+      /*border-radius: 25px;*/
+      background: #7ea668;
+}
+
+#bio {
+      width: 30%;
+      height: 90%;
+      border-radius: 25px;
+      position:relative;
+      background: #ffb700;
+      left: 20px;
+      top: 40px;
+}
+
+#help {
+      width: 30%;
+      height: 90%;
+      border-radius: 25px;
+      position:relative;
+      background: #a64b2e;
+      left: 210px;
+      bottom: 680px;
+}
+
+#logo {
+  height: 90px;
+  width: 120px;
+  position:relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 15px;
+}
+
+ #map {
+  height: 100%;
+  border-radius: 25px;
+}
+
+#subwindow{
+  height: 75%;
+  width: 75%;
+  position:relative;
+  top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mapHeader{
+    padding: 5px;
+    text-align: center;
+    font-family: "Verdana", Arial, serif;
+    color: #ffffff
+
+}
