@@ -48,7 +48,7 @@ position: absolute;
 }
 
 .header_fixed{
-    position: fixed;
+    position: relative;
     z-index: 110;
     top: 0;
     right: 0;
@@ -129,10 +129,6 @@ dropbtn {
   background-color: #fff9a3;
   z-index: 4;
   display: block;
-  transition-property: background-color;
-  transition-duration: 400ms;
-  transition-timing-function: ease-in;
-   transition-delay: initial;
 }
 
 #background{
@@ -186,7 +182,8 @@ dropbtn {
 }
 
 .personInfo{
-  font-size: 1em;
+
+  font-size: 1.5em;
   font-family: "Futura", Arial, serif;
   color: white;
 }
@@ -195,4 +192,12 @@ dropbtn {
   border-radius: .5em;
   width: 70%;
   height: 1.5em;
+
+}
+
+#title{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

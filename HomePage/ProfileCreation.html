@@ -17,13 +17,14 @@
       <span class="panel-toggler__line"></span>
      </button>
      <div class="dropdown-content">
-    <a href="#">Login/Create Profile</a>
+    <a href="#">Home Page</a>
     <a href="#">Settings</a>
     <a href="#">Terms</a>
   </div>
      </div>
   </div>
 
+<section>
 <div id= formWrapper>
 
 <div id= imageWrap>
@@ -34,35 +35,65 @@
 <form action="#######" method="post">
 <fieldset class= "field">
   <fieldset class= "field">
-    <title style= "font-size: 200%;"> CHARACTER SHEET </title>
-    <legend class= "personInfo" style="font-size:2.5em;" > Personal Info: </legend>
+  <legend class= "personInfo" style="font-size:2.5em;" > Personal Info: </legend>
     <label class= "personInfo">Username:  </label>
     <br>
-      <input type="text" name="text-input" size="30" maxlength ="30" class= "personInput">
+      <input type="text" name="username" size="30" maxlength ="30" class= "personInput">
     <br>
     <label class= "personInfo">Password:    </label>
     <br>
-      <input type="text" name="Numerical Input" size="30" maxlength ="30" class= "personInput">
+      <input type="password" name="passwordInput" size="30" maxlength ="30" class= "personInput">
     <br>
     <label class= "personInfo">Re-Enter Password:    </label>
       <br>
-      <input type="text" name="Password Input" size="30" maxlength="100" class= "personInput">
+      <input type="password" name="passwordInputCheck" size="30" maxlength="30" class= "personInput">
     <br>
 </fieldset>
 <br>
+
+
   <fieldset class= "field">
-         <p>Candy?
-              <br>
-              <label>
-                  <input type="radio" name="Candy" value="Snickers" />Snickers</label>
-              <br>
-              <label>
-                  <input type="radio" name="Candy" value="Skittles" />Skittles</label>
-              <br>
-              <label>
-                  <input type="radio" name="Candy" value="Mentos" />Mentos</label>
-          </p>
-</fieldset>
+
+    <label class= "personInfo">Name:  </label>
+    <br>
+      <input type="text" name="nameInput" size="30" class="personInput">
+    <br>
+    <label class= "personInfo">Location:    </label>
+    <br>
+ <!-- CONNECT TO MAPS API FOR AUTOCOMPLETE -->
+      <input type="text" name="" size="30" class= "personInput">
+    <br>
+ <!--------------------->
+
+    <label class= "personInfo">Country of Origin:    </label>
+      <br>
+ <!-- DROP DOWN MENU -->
+      <input type="select" name="Password Input" size="30"  class= "personInput">
+ <!--------------------->
+    <br>
+
+
+
+     <label class= "personInfo">Email Address:  </label>
+    <br>
+      <input type="text" name="email" size="30" class="personInput">
+    <br>
+    <label class= "personInfo">Interests:    </label>
+    <br>
+      <input type="text" name="interests" size="30" class= "personInput">
+    <br>
+
+    <label class= "personInfo">Biography:    </label>
+      <br>
+      <textarea rows="4" cols="50"  name="biograhy" size="30"  class= "personInput" style="height:4em;">
+      </textarea>
+    <br>
+
+
+
+
+
+  </fieldset>
 
 <fieldset class= "field">
     <label>
@@ -73,6 +104,8 @@
 </form>
 </div>
 </div>
+</section>
+
 
  </body>
 </html>
