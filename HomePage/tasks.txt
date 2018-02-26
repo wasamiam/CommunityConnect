@@ -1,0 +1,11 @@
+Home Page:
+  -js needs to grab user profile data from server
+  -Fill How to use section
+  -fille guide sections
+
+Profile Creation:
+  -API Google maps query autogenerate
+  -Adding photos (How?)
+
+Inspect this website for Country autocomplete:
+https://h30631.www3.hp.com/form/candidate/51876/3544/7242303
