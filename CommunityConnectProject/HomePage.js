@@ -1,10 +1,10 @@
-var map;
-var apiKey = "AIzaSyCsLRNstIbl5TVv1rpBitRWbk8tSH7gjmI";
-function initMap() {
+  var map;
+  var apiKey = "AIzaSyCsLRNstIbl5TVv1rpBitRWbk8tSH7gjmI";
+  function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 2,
-        center: {lat: -33.865427, lng: 151.196123},
-        mapTypeId: 'terrain'
+      zoom: 2,
+      center: {lat: -33.865427, lng: 151.196123},
+      mapTypeId: 'terrain'
     });
 
     // Create a <script> tag and set the USGS URL as the source.
@@ -16,27 +16,27 @@ function initMap() {
     document.getElementsByTagName('head')[0].appendChild(script);
 
     map.data.setStyle(function(feature) {
-        var magnitude = feature.getProperty('mag');
-        return {
-            icon: getCircle(magnitude)
-        };
+      var magnitude = feature.getProperty('mag');
+      return {
+        icon: getCircle(magnitude)
+      };
     });
-}
+  }
 
-function getCircle(magnitude) {
+  function getCircle(magnitude) {
     return {
-        path: google.maps.SymbolPath.CIRCLE,
-        fillColor: 'red',
-        fillOpacity: .2,
-        scale: Math.pow(2, magnitude) / 2,
-        strokeColor: 'white',
-        strokeWeight: .5
+      path: google.maps.SymbolPath.CIRCLE,
+      fillColor: 'red',
+      fillOpacity: .2,
+      scale: Math.pow(2, magnitude) / 2,
+      strokeColor: 'white',
+      strokeWeight: .5
     };
-}
+  }
 
-function eqfeed_callback(results) {
-    map.data.addGeoJson(results);
-}
+  function eqfeed_callback(results) {
+  map.data.addGeoJson(results);
+  }
 
 /*
 function right (){
