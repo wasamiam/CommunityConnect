@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="HomePage.css" type="text/css" href="favicon.ico" >
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body id = body1>
+<section id=section1 >
+
+    <header class= "header_fixed">
+        <div id=banner>
+            <img id=logo src= "https://s9.postimg.org/au0c1zrr3/oie_Q3_CNotmv_Atf_T.png" />
+
+            <div id = menuWrap class="dropdown">
+                <button id = menu class="dropbtn">
+                    <span class="panel-toggler__line"></span>
+                    <span class="panel-toggler__line"></span>
+                    <span class="panel-toggler__line"></span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="file:///Users/kamronebrahimi/Documents/GitHub/CommunityConnect/HomePage/ProfileCreation.html#">Login/Create Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+
+        <!--<div id=menu>
+        <fieldset class=navigate>
+        <p>
+                  <select name="menu" id="navigate">
+                      <option value="menu">Menu</option>
+                      <option value="create account">Create Account</option>
+                      <option value="FAQ">FAQ</option>
+                      <option value="About">About</option>
+                  </select>
+                    </p>
+           </fieldset>
+        </div>
+      -->
+    </header>
+
+
+
+    <div id = subwindow>
+        <div id="map"></div>
+
+        <header id=mapHeader > See where people are using CommunityConnect...</header>
+    </div>
+</section>
+
+<section id=section2>
+    <header class= "home_page_field"> About CommunityConnect: </header>
+</section>
+
+<section id=section3>
+    <header class= "home_page_field"> How To Use CommunityConnect: </header>
+</section>
+
+<script src="HomePage.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsLRNstIbl5TVv1rpBitRWbk8tSH7gjmI&callback=initMap"> </script>
+<!-- content here -->
+</body>
+</html>
