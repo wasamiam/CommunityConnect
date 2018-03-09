@@ -1,23 +1,36 @@
 <h1> hello {{name}} </h1>
 <p> This is the profile page </p>
 
-<p> Name: {{name}} </p>
-<p> Location: {{location}} </p>
-<p> Country of Origin: {{countryOfOrigin}} </p>
-<p> Email: {{email}} </p>
-<p> Interests: {{interests}} </p>
-<p> Biography: </p>
+<p style="color:green"> Name:</p>
+<p> {{name}} </p>
+
+<p style="color:green"> Location: </p>
+<p>  {{myLocation}} </p>
+
+<p style="color:green"> Country of Origin: </p>
+<p> {{countryOfOrigin}} </p>
+
+<p style="color:green"> Email: </p>
+<p> {{email}} </p>
+
+<p style="color:green"> Interests: </p>
+<p> {{interests}} </p>
+
+<p style="color:green"> Biography: </p>
 <p>{{biography}} </p>
 
 
 <form action="/search" method="get">
 
-        <label for="search">SEARCH</label>
-        <input id="searchButton" type="button" value ="search"  name="performSearch">
+        <input id="searchButton" type="submit" value ="Search"  name="performSearch">
 </form>
 
 <form action="/prevConnections" method="get">
-        <label for="prevConnections">PREVIOUS CONNECTION:</label>
-        <input id="password" value ="prevConnections" type="button" name="password">
+        <input id="password" value ="Friends List" type="submit" name="preConnections">
+
+</form>
+
+<form action="/homePage" method="post">
+        <input id="logout" value ="Logout" type="submit" name="Logout">
 
 </form>

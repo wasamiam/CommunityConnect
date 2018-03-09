@@ -19,6 +19,15 @@ app.get('/homePage',function(req, res, next){
 	res.render('home');
 });
 
+app.post('/homePage',function(req, res, next){
+ if(req.body['Logout']){
+                req.session.destroy()
+                console.log("session destroyed");
+        }
+
+res.render('home');
+});
+
 //User make a get request to LoginCreate from the homepage.
 app.get('/LoginCreate',function(req,res,next){
   var context = {};
@@ -87,7 +96,7 @@ app.post('/Login', function(req, res, next){
 		  req.session.connections = testProfile.connections;
 		
 	//	console.log(req.session.connections[1]);
-
+/*
 		  context.loggedIn = req.session.loggedIn;
   		  context.name = req.session.name;
   		  context.myLocation = req.session.myLocation;
@@ -100,12 +109,44 @@ app.post('/Login', function(req, res, next){
 		context.connections = req.session.connections;
 
         //        console.log(context.connections[1]);
-
-		res.render('profile', context); 
+*/
+		res.render('profile', req.session); 
 		return;
 	}
 	//if no match resend the login page
-	res.render('login',context);
+	res.render('login', req.session);
+});
+
+//The user went to login, doesnt have an account and clicks to make one
+app.get('/createProfile',function(req, res, next){
+	res.render('createProfile');
+});
+
+//The user enters create profile from the profile creation page
+app.post('/profile',function(req, res, next){
+	//Set the users fields to equal these fields
+	//Need to check that we have UNIQUE PASSWORD AND USERNAME
+        //Data also need to BE STORED IN DATABASE !!!!PASSWORD!!!!    
+		var context ={};
+		
+
+		  if(req.body.userPassword != req.body.userRePassword || req.body.userPassword == ""){
+			context.error = "you did not enter the same pasword!";
+			res.render('createProfile', context);
+			return;
+		}
+
+			req.session.loggedIn = true;
+                  req.session.name = req.body.userNameActual;
+                  req.session.myLocation = req.body.userLocation;
+                  req.session.countryOfOrigin = req.body.userCOO;
+                  req.session.email = req.body.userContact;
+                  req.session.interests = req.body.userInterests;
+                  req.session.biography = req.body.userBio;
+                  req.session.username = req.body.usernameIn;
+                  req.session.numFriends = 0;
+                  req.session.connections = []; 
+	res.render('profile', req.session);
 });
 
 //Tree --> user has either already logged in during this session or the user logged in successfully
@@ -118,6 +159,11 @@ app.get('/search', function(req, res, next){
 
 //The user selects "view previous connections" from profile
 app.get('/prevConnections', function(req, res, next){
+	if(req.body['remove']){
+		console.log("Removing a connection");
+		//Make some object editing, and a database editing to REMOVE THE CONNECTION OBJECT!!!!!
+		
+	}
 	console.log(req.session.connections[1]);
 	console.log('Display previous Connections');
 	res.render('friends', req.session); 

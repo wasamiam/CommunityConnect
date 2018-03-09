@@ -1,34 +1,55 @@
 <h1> Create Profile </h1>
 
+<h2 style="color:red"> {{error}} </h2>
 
-<form method="post">
+<form action ='/profile' method="post">
+<ul>
+        <li>
+                <label for="usernameIn"> Username : </label>
+                <input id="usernameIn" type="text"  name="usernameIn">
+        </li>
 
-        <label for="usernameIn"> Username : </label>
-        <input id="usernameIn" type="text"  name="usernameIn">
+        <li>
+                <label for="userPassword"> Password: </label>
+                <input id="userPassword" type="password" value =""  name="userPassword">
+        </li>
 
-         <label for="userPassword"> Password: </label>
-        <input id="userPassword" type="text" value =""  name="userPassword">
+        <li>
+                <label for="userRePassword"> Re-enter Password: </label>
+                <input id="userRePassword" type="password"  name="userRePassword">
+        </li>
 
-       <label for="userRePassword"> Re-enter Password: </label>
-        <input id="userRePassword" type="text"  name="userRePassword">
+        <li>
+                <label for="userNameActual"> Name: </label>
+                <input id="userNameActual" type="text"  name="userNameActual">
+        </li>
 
-         <label for="userNameActual"> Name: </label>
-        <input id="userNameActual" type="text"  name="userNameActual">
+        <li>
+                <label for="userLocation"> Location: </label>
+                <input id="userLocation" type="text"  name="userLocation">
+        </li>
 
-         <label for="userLocation"> Location: </label>
-        <input id="userLocation" type="text"  name="userLocation">
+        <li>
+                <label for="userCOO">Country Of Origin: </label>
+                <input id="userCOO" type="text"  name="userCOO">
+        </li>
 
-         <label for="userCOO">Country Of Origin: </label>
-        <input id="userCOO" type="text"  name="userCOO">
+        <li>
+                <label for="userContact"> Contact: </label>
+                <input id="userContact" type="text" name="userContact">
+        </li>
 
-         <label for="userContact"> Contact: </label>
-        <input id="userContact" type="text" name="userContact">
+        <li>
+                <label for="userInterests"> Interests: </label>
+                <input id="userInterests" type="text" name="userInterests">
+        </li>
 
-         <label for="userInterests"> Interests: </label>
-        <input id="userInterests" type="text" name="userInterests">
+        <li>
+                <label for="userBiography"> Biography: </label>
+                <input id="userBiography" type="text" name="userBio">
+        </li>
 
-         <label for="userBiography"> Biography: </label>
-        <input id="userBiography" type="text" name="userBio">
-
+        <li>
               <input type="submit" name="userProfileCreate">
+        </li>
 </form>
