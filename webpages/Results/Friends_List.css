@@ -1,0 +1,73 @@
+#connectionHead {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	font-family: "Futura", Arial, serif;
+	vertical-align: text-top;
+	margin-top: -30px;
+}
+
+#scrollBox{
+	position:relative;
+	top: 15%;
+	left: 10%;
+	border-radius: .93em;
+	z-index: 1;
+}
+
+#rcornersRight {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 5px; 
+    width: 48%;
+    height: 100%;
+	float: right;
+}
+
+#rcornersLeft {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 5px; 
+    width: 48%;
+    height: 100%; 
+	float: left;
+}
+
+.containerRow{
+	overflow: hidden;
+	padding: 20px;
+	height: 44%;
+}
+
+.rectangle {
+	top: 5%;
+	left: 53%;
+	height: 89%;
+	width: 42%;
+	background-color: #ffc3a0;
+	position: relative;
+	
+}
+
+#profilePic {
+	
+	float: left;
+	height: 89%;
+	width: 42%;
+	position: relative;
+	top: 5%;
+	left: 5%;
+	border-radius: 1%;
+	z-index: 5;
+}
+
+.textBlock {
+	font-family: "Futura", Arial, serif;
+	top: 1px;
+	padding: 10px 10px 10px 20px;
+	margin-bottom: 10px;
+	position: absolute;
+}
+#button{
+	
+}
