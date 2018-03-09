@@ -1,0 +1,251 @@
+\documentclass[12pt]{article}
+%\usepackage{times}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{geometry}
+%this is a comment
+\title{First Implementation of System: CommunityConnect}
+\author{Kamron Ebrahimi \& Samuel Wilson \& Leif Tsang \\ \& Thomas Korsness  \& Quinton Osborn \\ ebrahimk, wilsosam, tsangl, korsnest, osbornq \\ \scriptsize{Git URL: https://github.com/ebrahimk/CS361-001-W2018/tree/CommunityConnect-Assignment-5/projects/ebrahimk/assignment-6}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{\bf  Product Release}
+  \paragraph{\normalfont \indent  Unfortunately the development team ran into significant roadblocks this week trying to implement the back end architecture of the CommunityConnect system. Most of the client side code for CommunityConnect’s primary use cases,  as well as the search algorithm the program intends to use have been completed, but because there is no back end architecture serving the pages CommunityConnect lacks functionality and cannot be used at this point. The development team is now roughly an entire week behind schedule and recognizes that substantial time and effort will need to be spent on the application to get it up, running and released on time.
+  }
+  \paragraph{\normalfont \indent These schedule changes are outlined in more detail in the “Design Changes and Rationale” section of this assignment. Regardless of the unforeseen issues encountered by the development team, the members are still optimistic about completing the application. The pieces of the application have all been completed but now the team must make the pieces work together seamlessly.
+  }
+
+
+\section{\bf  User Stories }
+
+  \begin{enumerate}
+    \item User views the “How To Use CommunityConnect” on the home page.
+      \begin{itemize}
+        \item \textbf{Teammates:}
+          \begin{itemize}
+            \item Kamron
+            \item Thomas
+          \end{itemize}
+        \item \textbf{Problems:}
+          \begin{itemize}
+            \item Not many issues to run into. Easy to implement. All front end.
+            \item Not styled the way we want.
+            \item Server not properly serving style.css
+          \end{itemize}
+        \item \textbf{Time:}
+          \begin{itemize}
+            \item 40 min
+          \end{itemize}
+        \item \textbf{Current Status:}
+          \begin{itemize}
+            \item Implemented
+            \item Tested
+          \end{itemize}
+        \item \textbf{To Be Completed:}
+          \begin{itemize}
+            \item Styling
+          \end{itemize}
+        \item \textbf{Helpfullness of Diagrams:}
+          \begin{itemize}
+            \item This portion was done before the diagrams were made for last assignment so they didn’t come in handy. The only thing left is some styling which is not included in any of our diagrams.
+          \end{itemize}
+      \end{itemize}
+
+  \begin{enumerate}
+    \item User clicks “Create Profile” from the drop down menu.
+      \begin{itemize}
+        \item \textbf{Teammates:}
+          \begin{itemize}
+            \item Sam
+            \item Quinton
+          \end{itemize}
+        \item \textbf{Problems:}
+          \begin{itemize}
+            \item Still having a lot of issues with the back end.
+            \item Our user profile interface is completed, but the profile data is not yet stored in the database.
+          \end{itemize}
+        \item \textbf{Time:}
+          \begin{itemize}
+            \item 3 hrs.
+            \item Expecting an additional 3 hours to implement the back end.
+          \end{itemize}
+        \item \textbf{Current Status:}
+          \begin{itemize}
+            \item Partially complete
+          \end{itemize}
+        \item \textbf{To Be Completed:}
+          \begin{itemize}
+            \item Connect user profile info to database. Meaning that when a profile is created, an object is created and saved on the database that can be accessed for later use.
+          \end{itemize}
+        \item \textbf{Helpfullness of Diagrams:}
+          \begin{itemize}
+            \item The diagrams are helpful to get an understanding of how the create profile page connects to the database.
+            \item This is not yet implemented so there is still some use from the diagram.
+          \end{itemize}
+      \end{itemize}
+
+  \begin{enumerate}
+    \item User views heat map on page.
+      \begin{itemize}
+        \item \textbf{Teammates:}
+          \begin{itemize}
+            \item Leif
+            \item Kamron
+          \end{itemize}
+        \item \textbf{Problems:}
+          \begin{itemize}
+            \item Had to use the Google Maps API which took some work to understand and implement.
+            \item Had little to no experience with Google API’s in the past.
+          \end{itemize}
+        \item \textbf{Time:}
+          \begin{itemize}
+            \item 4 hrs
+            \item Expecting an additional 3 hours to implement the back end.
+          \end{itemize}
+        \item \textbf{Current Status:}
+          \begin{itemize}
+            \item Partially complete
+            \item Currently interacting with a public earthquake database for limited testing.
+          \end{itemize}
+        \item \textbf{To Be Completed:}
+          \begin{itemize}
+            \item Testing with our own database
+            \item Storing profiles isn’t quite there yet. Profiles store the location of the user which is used for the API.
+          \end{itemize}
+        \item \textbf{Helpfullness of Diagrams:}
+          \begin{itemize}
+            \item The diagram again helped us to understand how the heat map should be created. The issue is still that the back end is not finished so no locations are saved for the map.
+          \end{itemize}
+      \end{itemize}
+
+  \begin{enumerate}
+    \item User wants to find individuals in their area with the same country of origin.
+      \begin{itemize}
+        \item \textbf{Teammates:}
+          \begin{itemize}
+            \item Quinton
+            \item Leif
+          \end{itemize}
+        \item \textbf{Problems:}
+          \begin{itemize}
+            \item User classes aren’t currently implemented. Implementing search impossible until they are.
+            \item Database must also be implemented and accessible.
+            \item Having trouble working with backend JavaScript.
+          \end{itemize}
+        \item \textbf{Time:}
+          \begin{itemize}
+            \item 1 hr for front-end implementation.
+            \item Expecting an additional 3 hours to implement the back end.
+          \end{itemize}
+        \item \textbf{Current Status:}
+          \begin{itemize}
+            \item Rough pseudocode made.
+            \item Waiting for User class implementation.
+            \item Waiting for database implementation.
+          \end{itemize}
+        \item \textbf{To Be Completed:}
+          \begin{itemize}
+            \item Actual implementation of search algorithm.
+          \end{itemize}
+        \item \textbf{Helpfullness of Diagrams:}
+          \begin{itemize}
+            \item Helped in thinking about and creating search algorithm.
+          \end{itemize}
+      \end{itemize}
+
+  \begin{enumerate}
+    \item User already has an account and wants to view their information.
+      \begin{itemize}
+        \item \textbf{Teammates:}
+          \begin{itemize}
+            \item Thomas
+            \item Kamron
+          \end{itemize}
+        \item \textbf{Problems:}
+          \begin{itemize}
+            \item Back end is not completed so user data can’t be served back to the user. The interface is designed and will look similar to the create profile page.
+          \end{itemize}
+        \item \textbf{Time:}
+          \begin{itemize}
+            \item 1 hr for front-end implementation.
+            \item Expecting an additional 3 hours to implement the back end.
+          \end{itemize}
+        \item \textbf{Current Status:}
+          \begin{itemize}
+            \item Partially complete.
+            \item Not connected to database.
+          \end{itemize}
+        \item \textbf{To Be Completed:}
+          \begin{itemize}
+            \item Back end still needs to be completed.
+            \item The page needs access to the database to serve the users stored info.
+            \item Another use of this is to change and save the information on the database for the current user.
+          \end{itemize}
+        \item \textbf{Helpfullness of Diagrams:}
+          \begin{itemize}
+            \item The diagram helped to understand how the user interacts with the page and what happens to it when it’s to be saved. The issue is still that the info on the page can’t be saved to the database yet.
+            \item We are not in need of another diagram for this specific case. We have a strong understanding of how each piece is connected. The issue is the actual implementation of the back end.
+          \end{itemize}
+      \end{itemize}
+  \end{enumerate}
+
+\section{\bf Design Change and Rationale}
+
+  \paragraph{\normalfont \indent Substantial changes have been made to the development team’s approach to for implementing the backend architecture of the system. The team has decided to use Node.js and express to serve pages after making several failed attempts to implement a back-end architecture in php, and utilize mongoDB for database creation. For the sake of saving time the team has decided to change their approach but now has no back-end code and is behind schedule. The team recognizes that the product release deadline is very rapidly approaching but is still optimistic.
+  }
+  \paragraph{\normalfont \indent At this point in the development process most of the client side development has been completed and clear, well-defined interfaces have been established for each component of the system. Due to the fact that the team was unable to implement a successful backend architecture there is no “glue” connecting the separate web pages and their interfaces. Thus while the development team is now behind schedule, the team need only focus their energy on developing a backend architecture in the coming week.
+  }
+  \paragraph{\normalfont \indent This week the team plans to invest heavily in learning more about back-end architecture and will work overtime to get something up and running so the product can have ample time for further testing before release.
+  }
+
+\section{\bf Tests}
+
+\paragraph{\normalfont \indent One unit test for a major existing system task is serving the HTML. We’re able to serve all of our HTML pages properly, as well as browse them. However, we’ve tested and altered our JavaScript code for serving a lot, and we still have not managed to properly serve JavaScript and CSS. We’ve tested multiple different sets of handlebars functions but haven’t quite figured out the issue yet.
+}
+\paragraph{\normalfont \indent A unit test for a major existing user story is our first story regarding the user viewing “How to use CommunityConnect” on the home page. Since it’s not a very active experience, there isn’t much to talk about. However, at the time this test is being written about, our Node.js code isn’t properly serving our JavaScript and CSS files. Therefore, the style of the homepage doesn’t appear how we need it to and the experience we want the user to receive isn’t being portrayed.
+}
+\paragraph{\normalfont \indent  The heat map is partially implemented in that we have been able to use one that taps into a database storing earthquake information, and we have tested our heat map code using that. Because our database has not been implemented yet, we cannot test it using our own user’s locations. However, the tests we can run involve viewing the map to make sure that locations with high populations are properly “heated” to show that there’s more activity there.
+}
+\paragraph{\normalfont \indent  As for unimplemented components of the system, there are multiple we can talk about in regards to the tests we will run on them. In terms of user stories, the “friend search” story would be tested by running it with multiple different parameters. The plan is the create a randomization algorithm to fill the data base with a couple thousand randomly generated users and then use that to gauge the successfulness of the friend searching algorithm. Edge cases such as a user having very, very many interest tags on their profile would need to be tested as well, both for algorithm runtime and determining the strength of the match.
+}
+\paragraph{\normalfont \indent Users viewing their own profile information is another story we would be able to test after implementation. Testing this component would involve making sure all the information is properly displayed. More importantly, testing of the “edit” button will be crucial. This is because when the user inserts new information, we have to make sure there aren’t any errors in the entries the user provides. This testing would also be very similar to another of our user stories, the “Profile creation.” The biggest tests for both involve verifying the validity of the data entered by the user. Any required fields missing information or any information not making sense (numbers or symbols in a city name field, for example).
+}
+
+
+\section{\bf Meeting Report}
+
+\paragraph{\normalfont \indent The team met multiple times this past week attempting to construct the backend architecture of the system using php and mongoDB. After many unsuccessful attempts the team recognized that, for the sake of saving time, the team would have to switch methods. The team is now working on implementing a backend architecture using Node.js, Express and Handlebars. This design change has pushed the schedule back approximately one week. The team recognizes that this schedule change will require team members to work overtime to complete the product before the March 16th deadline.
+}
+\paragraph{\normalfont \indent Going into this next week the team is prioritizing the spikes differently. The top priority spike is getting the server side code interacting and taking GET and POST requests from the client side pages. The team has a general idea of how this will be achieved using Node.js, Express and Handlebars and should be able to complete this mid week. Once this is complete the team has five more user stories they plan to tackle. The team first wants to complete the stories that were initially due last week, these are “User wants to find individuals in their area with the same country of origin” and “User already has an account and wants to view their information.” After completing these stories by approximately Thursday, the team will meet on a daily basis and attempt to complete the following stories:
+}
+
+  \begin{itemize}
+    \item “User wants to access people they have already matched with”
+    \item “User wants to view the profiles of individuals returned from a search”
+    \item “User wants to edit the information contained in their profile”
+    \item “User sends an in-app message”
+  \end{itemize}
+
+\paragraph{\normalfont \indent The customer was able to meet with the development team and understands that the the product is behind schedule. However the development team wants to stress that the final product will be delivered on time, test and ready for deployment. This coming week the team has agreed to meet regularly in order to complete the product and play “catch-up”.
+}
+
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ Kamron Ebrahimi & User Stories and Home Page - LaTex Writeup \\
+ Quinton Osborn & Tests, Back end development \\
+ Leif Tsang & User Stories, Tests \\
+ Thomas Korsness & User Stories, back end development  \\
+ Samuel Wilson &  Meeting Report \\
+ \hline
+\end{tabular}
+\end{center}
+
+\end{document}

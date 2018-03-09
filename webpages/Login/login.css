@@ -1,0 +1,99 @@
+
+#section1 {
+      width: 100%;
+      height: 50em;
+      /*border-radius: 25px;*/
+      background: #fff9a3;
+}
+
+#body1{
+  background: #fff9a3;
+}
+
+#logo {
+  height: 60px;
+  width: 7.19em;
+  position:relative;
+  top: .625em;
+  left: .625em;
+  border-radius: .93em;
+  z-index: 5;
+
+}
+
+.personInput{
+
+  border-radius: .5em;
+  width: 70%;
+  height: 1.5em;
+  border-style: solid;
+  border-width: thin;
+  font-size:1em;
+  font-family: "Futura", Arial, serif;
+}
+
+.personPass{
+  padding-right:.2em;
+  font-size:1em;
+  font-family: "Futura", Arial, serif;
+}
+
+.field{
+  border: none;
+}
+
+.box{
+   margin:0 auto;
+   width:40em;
+   padding-top:10em;
+   color:#a3d5ff;
+   font-family: "Futura", Arial, serif;
+}
+
+.mid{
+  padding-top:.2em;
+}
+.mid1{
+  padding-top:.2em;
+}
+
+.LoginButton{
+  position:relative;
+  background-color:white;
+  border-radius:1em;
+  font-size:1em;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  left:18em;
+}
+.ForgetPass{
+  background-color: Transparent;
+  border:none;
+  color:#a3d5ff;
+  font-size:1em;
+   margin-left:-.5em;
+}
+.button1{
+  display:inline-block;
+}
+
+.bottomButton{
+  position:relative;
+  text-align: center;
+  margin-top:40%;
+}
+
+.TOU{
+  background-color: Transparent;
+  border:none;
+  color:#a3d5ff;
+  font-size:1em;
+}
+
+.FAQ{
+  background-color: Transparent;
+  border:none;
+  color:#a3d5ff;
+  font-size:1em;
+}

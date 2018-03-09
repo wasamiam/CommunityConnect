@@ -1,0 +1,27 @@
+<h1> FRIENDS </h1>
+
+<h2>You have {{numFriends}} friends.</h2>
+
+{{#if connections}}
+<ul>
+  {{#each connections}}
+  <li>
+    <h3>{{this.name}}</h3>
+  </li>
+  <li>
+    <p>INTERESTS: {{this.interests}} </p>
+  </li>
+  <li>
+    <p>BIOGRAPHY: {{this.biography}} </p>
+  </li>
+
+ <li>
+        <form method="post">
+                <input id="remove" value ="Remove" type="submit" name="remove">
+        </form>
+</li>
+
+
+  {{/each}}
+</ul>
+{{/if}}
