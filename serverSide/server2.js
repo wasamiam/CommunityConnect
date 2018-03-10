@@ -20,80 +20,79 @@ app.get('/homePage',function(req, res, next){
 });
 
 app.post('/homePage',function(req, res, next){
- if(req.body['Logout']){
-                req.session.destroy()
-                console.log("session destroyed");
-        }
+	if(req.body['Logout']){
+        req.session.destroy()
+        console.log("session destroyed");
+    }
 
-res.render('home');
+	res.render('home');
 });
 
 //User make a get request to LoginCreate from the homepage.
 app.get('/LoginCreate',function(req,res,next){
-  var context = {};
-  //If there is no session, go to the main page.
-  console.log("here");
+	var context = {};
+    //If there is no session, go to the main page.
+	console.log("here");
   
-  if(!req.session.loggedIn){
-    res.render('login', context);
-    return;
-  }
+	if(!req.session.loggedIn){
+		res.render('login', context);
+		return;
+	}
   
-  context.loggedIn = req.session.loggedIn;
-  context.name = req.session.name;
-  context.myLocation = req.session.myLocation;
-  context.countryOfOrigin = req.session.countryOfOrigin;
-  context.email = req.session.email;
-  context.interests = req.session.interests;
-  context.biography = req.session.biography;
-  context.username = req.session.username;
-  context.connections = req.session.connections;
-  res.render('profile',context);
+	context.loggedIn = req.session.loggedIn;
+	context.name = req.session.name;
+	context.myLocation = req.session.myLocation;
+	context.countryOfOrigin = req.session.countryOfOrigin;
+	context.email = req.session.email;
+	context.interests = req.session.interests;
+	context.biography = req.session.biography;
+	context.username = req.session.username;
+	context.connections = req.session.connections;
+	res.render('profile',context);
 });
 
 //Tree---> user doesnt have a profile, and the session marks them as not loggedIn --> we go to Login page
 //From the "login" page, the form POSTS to /Login with the username and password fields which we search are data base for matches
 app.post('/Login', function(req, res, next){
-	  var context = {};
+	var context = {};
 	//User enters create profile
 	console.log("Inside login");
 	if(req.body['Login']){
 		//Scan through database looking for the netered credentials if they exits-->
-		  	var testProfile = {username:"Kamron123", 
-					password: sha1("secretpassword"), 
-					name: "Kamron",
-					myLocation: "Corvallis",
-					countryOfOrigin: "United States",
-					email: "testEmail@gmail.com",
-					interests: "eating food",
-					biography: "Hello I am Kam, I like to eat food, that all there is to me",
-					numFriends: 2,
-					connections:[   connection1 ={
-								name:"Joe",
-								interests:"driving and eating",
-								biography:"Hi im Joe I like to drive my truck and eat food."	
-								},
-							connection2 ={
-                                                        	name:"Katie",
-                                                        	interests:"laughing and skipping",
-                                                        	biography:"Hi im Katie I like to laugh and skip"
-                                                        	} 
-							]
-					};
-				
+		var testProfile = {username:"Kamron123", 
+			password: sha1("secretpassword"), 
+			name: "Kamron",
+			myLocation: "Corvallis",
+			countryOfOrigin: "United States",
+			email: "testEmail@gmail.com",
+			interests: "eating food",
+			biography: "Hello I am Kam, I like to eat food, that all there is to me",
+			numFriends: 2,
+			connections:[   
+				connection1 ={
+					name:"Joe",
+					interests:"driving and eating",
+					biography:"Hi im Joe I like to drive my truck and eat food."	
+				},
+				connection2 ={
+					name:"Katie",
+					interests:"laughing and skipping",
+					biography:"Hi im Katie I like to laugh and skip"
+				}]
+		};		
 	//	console.log(testProfile.connections[1]);	
 
-	 	//WE NEED TO SET THE FIELDS OF BOTH CONTEXT AND SESSSION based off the returned matching user profile object 
-		  req.session.loggedIn = true; 
-                  req.session.name = testProfile.name;
-                  req.session.myLocation = testProfile.myLocation
-                  req.session.countryOfOrigin = testProfile.countryOfOrigin;
-                  req.session.email = testProfile.email;
-                  req.session.interests = testProfile.interests;
-                  req.session.biography = testProfile.biography;
-                  req.session.username = testProfile.username; 
-		  req.session.numFriends = testProfile.numFriends;
-		  req.session.connections = testProfile.connections;
+	 //WE NEED TO SET THE FIELDS OF BOTH CONTEXT AND SESSSION based off the returned matching user profile object 
+		req.session.loggedIn = true; 
+		req.session.name = testProfile.name;
+		req.session.myLocation = testProfile.myLocation
+		req.session.countryOfOrigin = testProfile.countryOfOrigin;
+		req.session.email = testProfile.email;
+		req.session.interests = testProfile.interests;
+		req.session.biography = testProfile.biography;
+		req.session.username = testProfile.username; 
+		req.session.numFriends = testProfile.numFriends;
+		req.session.connections = testProfile.connections;
 		
 	//	console.log(req.session.connections[1]);
 /*
@@ -111,7 +110,7 @@ app.post('/Login', function(req, res, next){
         //        console.log(context.connections[1]);
 */
 		res.render('profile', req.session); 
-		return;
+			return;
 	}
 	//if no match resend the login page
 	res.render('login', req.session);
@@ -127,25 +126,23 @@ app.post('/profile',function(req, res, next){
 	//Set the users fields to equal these fields
 	//Need to check that we have UNIQUE PASSWORD AND USERNAME
         //Data also need to BE STORED IN DATABASE !!!!PASSWORD!!!!    
-		var context ={};
-		
+	var context ={};
+	if(req.body.userPassword != req.body.userRePassword || req.body.userPassword == ""){
+		context.error = "you did not enter the same pasword!";
+		res.render('createProfile', context);
+		return;
+	}
 
-		  if(req.body.userPassword != req.body.userRePassword || req.body.userPassword == ""){
-			context.error = "you did not enter the same pasword!";
-			res.render('createProfile', context);
-			return;
-		}
-
-			req.session.loggedIn = true;
-                  req.session.name = req.body.userNameActual;
-                  req.session.myLocation = req.body.userLocation;
-                  req.session.countryOfOrigin = req.body.userCOO;
-                  req.session.email = req.body.userContact;
-                  req.session.interests = req.body.userInterests;
-                  req.session.biography = req.body.userBio;
-                  req.session.username = req.body.usernameIn;
-                  req.session.numFriends = 0;
-                  req.session.connections = []; 
+	req.session.loggedIn = true;
+    req.session.name = req.body.userNameActual;
+    req.session.myLocation = req.body.userLocation;
+    req.session.countryOfOrigin = req.body.userCOO;
+    req.session.email = req.body.userContact;
+    req.session.interests = req.body.userInterests;
+    req.session.biography = req.body.userBio;
+    req.session.username = req.body.usernameIn;
+    req.session.numFriends = 0;
+    req.session.connections = []; 
 	res.render('profile', req.session);
 });
 
@@ -171,19 +168,19 @@ app.get('/prevConnections', function(req, res, next){
 
 
 app.use(function(req,res){
-  res.status(404);
-  res.render('404');
+	res.status(404);
+	res.render('404');
 });
 
 app.use(function(err, req, res, next){
-  console.error(err.stack);
-  res.type('plain/text');
-  res.status(500);
-  res.render('500');
+	console.error(err.stack);
+	res.type('plain/text');
+	res.status(500);
+	res.render('500');
 });
 
 app.listen(app.get('port'), function(){
-  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+	console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
 
 /*
