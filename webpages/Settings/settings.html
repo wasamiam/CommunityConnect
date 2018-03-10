@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Settings</title>
+		<link rel="stylesheet" href="./HomePage.css" type="text/css" href="favicon.ico" >
+		<link rel="stylesheet" href="./settings.css" type="text/css" href="favicon.ico" >
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body id=Body>
+		<section id=section1>
+			<br/>
+			<h1 id=mainBanner>Settings</h1>
+			<div id=rectangle align=left>
+				<br/>
+				<form method="get" action="/action_page.php">
+				
+				
+					<div class="slidecontainer">
+						<label id=label for="point1">Age Range:</label>
+						<input class="slider1" type="range" name="point1" id="points" value="50" min="0" max="100" data-show-value="true">
+					</div>
+					</br>
+					</br>
+					<div class="slidecontainer">
+						<label id=label for="point2">Points:</label>
+						<input class="slider1" type="range" name="point2" id="points" value="50" min="0" max="100" data-show-value="true">
+					</div>
+					<br/>
+					<br/>
+					
+					<div>
+						<p>Encode Email:</p>
+						<label class="switch">
+							
+							<input name=switch type="checkbox">
+							<span class="slider round"></span>
+						</label>
+					</div>
+					<br/>
+					<div id=checkbox>
+						<div class="round">
+							<p>Filter By:</p>
+							<input type="checkbox" class="checkbox-round" />
+							<label for="checkbox">  Intrests</label>
+							<br/>
+							<input type="checkbox" class="checkbox-round" />
+							<label for="checkbox">  Country of Origin</label>
+						</div>
+					</div>
+					<br/>
+					<br/>
+					
+					<div>
+						<select name="Language: ">
+							<option value="Select">Select</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+						
+						<input type="submit" data-inline="true" value="Submit">
+					</div>
+					<br/>
+				</form>
+			</div>
+			<br/>
+			<p><a href="">Terms of Use</a> | <a href="">FAQ</a> </p>
+		</section>
+	</body>
+</html>
