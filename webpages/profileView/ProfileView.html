@@ -27,41 +27,50 @@
     </header>
     <div id="main_section">
       <div id=profile_panel>
-        <div id="arrow_left"><label class="arrows"><</label></div>
-        <div id="info">
-          <div id="profile_image_div"><img id="profile_image" src="blank-profile-picture.png" alt="Empty"></div>
-          <table id="profile_table">
-            <tr>
-              <td>Name:</td>
-              <td>{{name}}</td>
-            </tr>
-            <tr>
-              <td>Location:</td>
-              <td>{{location}}</td>
-            </tr>
-            <tr>
-              <td>Country of Origins:</td>
-              <td>{{country}}</td>
-            </tr>
-            <tr>
-              <td>Contact:</td>
-              <td>{{contact}}</td>
-            </tr>
-            <tr>
-              <td>Interests:</td>
-              <td>{{interests}}</td>
-            </tr>
-            <tr>
-              <td>Biography:</td>
-              <td>{{biography}}</td>
-            </tr>
-          </table>
+        <table id="outertable">
+          <tr>
+            <td><div id="arrow_left"><label class="arrows"><</label></div></td>
+            <td>
+              <div id="info">
+                <div id="profile_image_div"><img id="profile_image" src="blank-profile-picture.png" alt="Empty"></div>
+                <table id="profile_table">
+                  <tr>
+                    <td>Name:</td>
+                    <td>{{name}}</td>
+                  </tr>
+                  <tr>
+                    <td>Location:</td>
+                    <td>{{location}}</td>
+                  </tr>
+                  <tr>
+                    <td>Country of Origins:</td>
+                    <td>{{country}}</td>
+                  </tr>
+                  <tr>
+                    <td>Contact:</td>
+                    <td>{{contact}}</td>
+                  </tr>
+                  <tr>
+                    <td>Interests:</td>
+                    <td>{{interests}}</td>
+                  </tr>
+                  <tr>
+                    <td>Biography:</td>
+                    <td>{{biography}}</td>
+                  </tr>
+
+              </div>
+
+        </table>
+        </td>
+        <td><div id="arrow_right"><label class="arrows">></label></div></td>
+        </tr>
         </div>
-        <div id="arrow_right"><label class="arrows">></label></div>
-      </div>
-      <div id="page_counter">
-        <label>{{currentpage}}/{{totalpages}}</label>
-      </div>
+      </table>
+
+    </div>
+    <div id="page_counter">
+      <label>{{currentpage}}/{{totalpages}}</label>
     </div>
   </body>
 </html>

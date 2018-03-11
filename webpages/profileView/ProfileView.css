@@ -216,7 +216,7 @@ body{
   width: auto;
   margin-left: 2em;
   margin-right: 2em;
-  background-color: green;
+  background-color: #73AD21;
 }
 
 #profile_table{
@@ -234,7 +234,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1em;
-
+  color: black;
 }
 
 #profile_image{
@@ -259,16 +259,22 @@ body{
 }
 
 .arrows{
-  
+  text-align: center;
+  font-size: 3em;
 }
 #arrow_left{
-  text-align: center;
-  display:inline-block;
-  vertical-align: middle;
+
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #arrow_right{
-  text-align: center;
-  display:inline-block;
-  vertical-align: middle;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#outertable{
+  margin-left: auto;
+  margin-right: auto;
 }
