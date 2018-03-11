@@ -178,7 +178,7 @@ dropbtn {
 
 
  #map {
-     border-radius: 1.56em;
+    border-radius: 1.56em;
     height: 100%;
     display: block;
 }
@@ -202,4 +202,22 @@ dropbtn {
     text-align: center;
     font-family: "Futura", Arial, serif;
     color: #a3d5ff;
+}
+
+#aboutCC{
+	font-family: "Futura", Arial, serif;
+	font-size: 30px;
+	line-height: 40px;
+	padding-left: 10%;
+	padding-right: 55%;
+	padding-top: 7%;
+}
+
+#howTo{
+	font-family: "Futura", Arial, serif;
+	font-size: 30px;
+	line-height: 40px;
+	padding-left: 10%;
+	padding-right: 55%;
+	padding-top: 7%;
 }
